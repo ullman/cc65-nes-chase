@@ -225,8 +225,8 @@ static unsigned char map[MAP_WDT*MAP_HGT];
 
 //put all the subsequent global vars into zeropage, to make code faster and shorter
 
-#pragma bssseg (push,"ZEROPAGE")
-#pragma dataseg(push,"ZEROPAGE")
+#pragma bss-name (push,"ZEROPAGE")
+#pragma data-name (push,"ZEROPAGE")
 
 //set of general purpose global vars that are used everywhere in the program
 //this makes code faster and shorter, although not very convinent and readable
