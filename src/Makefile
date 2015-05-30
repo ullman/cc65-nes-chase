@@ -6,16 +6,8 @@ clean:
 	@rm -fv Chase.nes
 	@rm -fv crt0.o
 
-crt0.o: crt0.s
-	ca65 crt0.s
-
-%.o: %.c
-	cc65 -Oi $< --add-source
-	ca65 $*.s
-	rm $*.s
-
-Chase.nes: game.o crt0.o
-	ld65 -t nes -o $@ crt0.o $< $(CC65_NESLIB)
+Chase.nes: game.c crt0.s
+	cl65 -t nes -o $@ game.c crt0.s $(CC65_NESLIB)
 
 .PHONY: clean all
 
