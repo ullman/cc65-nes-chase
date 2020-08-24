@@ -6,8 +6,7 @@ make it compile with the current head of the cc65 compiler.
 
 ##Compiling
 
-1.Install the free 6502 compiler:
-http://cc65.github.io/cc65/
+1.Install the free 6502 compiler: https://cc65.github.io/
 Make sure you build the runtime libraries for the nes.
 
 2.Edit the Makefile to point to the compiled nes.lib
